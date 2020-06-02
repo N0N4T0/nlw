@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 100vh;
 
     background: url('../assets/home-background.svg') no-repeat;
-    background-position: 35vw bottom;
+    background-position: 35vw 20vh;
 }
 
 #page-home .content{
@@ -160,3 +160,11 @@ h1, h2, h3, h4, h5, h6 {
         align-items: center;
     }
 }
+
+/*
+@media (max-width: 2540px) {
+    #page-home {
+        background-position-x: 40vw;
+        background-position-y: 40vh;
+    }
+}*/
