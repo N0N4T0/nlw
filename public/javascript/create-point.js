@@ -47,17 +47,17 @@ document
     .querySelector("select[name=uf]")
     .addEventListener("change", getCities)
 
-//itens de coleta
-const itensToCollect = document.querySelectorAll(".itens-grid li")    
+//items de coleta
+const itemsToCollect = document.querySelectorAll(".items-grid li")    
 
-for (const item of itensToCollect) {
+for (const item of itemsToCollect) {
     item.addEventListener("click", handleSelectedItem)
 }
 
-const collectedItens = document.querySelector("input[name=itens")
+const collecteditems = document.querySelector("input[name=items")
 
 
-let selectedItens = []
+let selecteditems = []
 
 function handleSelectedItem(event){
     const itemLi = event.target
@@ -67,19 +67,21 @@ function handleSelectedItem(event){
 
     const itemId = itemLi.dataset.id
 
-    const alreadySelected = selectedItens.findIndex(item => item == itemId)
+    //console.log('ITEM ID: ', itemId)
+
+    const alreadySelected = selecteditems.findIndex(item => item == itemId)
 
     if(alreadySelected >= 0){
-        const filteredItens = selectedItens.filter(item =>{
+        const filtereditems = selecteditems.filter(item =>{
             const itemIsDifferent = item != itemId
             return itemIsDifferent
         })
 
-        selectedItens = filteredItens
+        selecteditems = filtereditems
     } else {
-        selectedItens.push(itemId)
+        selecteditems.push(itemId)
     }
-    //console.log(selectedItens)
+    //console.log('selecteditems: ', selecteditems)
 
-    collectedItens.value = selectedItens
+    collecteditems.value = selecteditems
 }
