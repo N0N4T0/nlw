@@ -63,13 +63,13 @@ db.serialize(() => {
 //     //     console.log(rows)
 //     // })
 
-    db.run(`DELETE FROM places`, function(err){
+    // db.run(`DELETE FROM places`, function(err){
 
-    //db.run(`DELETE FROM places WHERE id = ?`, [3], function(err){
-        if(err){
-            return console.log(err)
-        }
+    // //db.run(`DELETE FROM places WHERE id = ?`, [3], function(err){
+    //     if(err){
+    //         return console.log(err)
+    //     }
 
-        console.log("Registrado deletado com sucesso")
-    })
+    //     console.log("Registrado deletado com sucesso")
+    // })
 })
